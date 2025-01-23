@@ -1,0 +1,18 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Вимикає горизонтальну прокрутку, якщо контент виходить за межі екрану */
+}
+
+* {
+  box-sizing: border-box; /* Глобальне управління коробочною моделлю */
+}

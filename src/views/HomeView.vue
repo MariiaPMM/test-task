@@ -1,6 +1,7 @@
 <template>
   <div>
     <TheHeader />
+
     <KnowMore />
     <!-- Перша секція -->
     <!-- <Section2 /> Друга секція -->

@@ -11,9 +11,15 @@ const routes = [
       },
       {
         path: '',
+        name: 'TheSlider',
+        component: () => import('@/components/TheSlider.vue'),
+      },
+      {
+        path: '',
         name: 'KnowMore',
         component: () => import('@/views/KnowMore.vue'),
       },
+
       {
         path: '',
         name: 'TheFooter',
