@@ -76,12 +76,13 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  max-width: 610px;
+  max-width: 642px;
   padding-right: 40px;
-  margin: auto;
+  margin: 25px;
   overflow: hidden;
   position: relative;
-  height: 300px; /* Висота контейнера слайдера */
+  height: 18.75rem; /* Висота контейнера слайдера */
+  border-radius: 15px;
 }
 
 .slider {

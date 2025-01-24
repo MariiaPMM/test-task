@@ -16,6 +16,11 @@ const routes = [
       },
       {
         path: '',
+        name: 'TheNavigation',
+        component: () => import('@/components/TheNavigation.vue'),
+      },
+      {
+        path: '',
         name: 'KnowMore',
         component: () => import('@/views/KnowMore.vue'),
       },
