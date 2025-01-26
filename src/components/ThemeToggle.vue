@@ -1,10 +1,10 @@
 <template>
   <div class="card">
     <div class="card-content">
-      <img class="logo" src="../assets/images/logo.png" alt="logo" />
+      <img class="logo" src="../assets/images/logo/logo.png" alt="logo" />
       <p :class="{ 'dark-text': isDarkMode }">Taking Learning to the Next Level</p>
       <div class="theme-toggle" @click="toggleTheme">
-        <div class="mode-label" :class="{ 'left': isDarkMode, 'right': !isDarkMode }">
+        <div class="mode-label" :class="{ left: isDarkMode, right: !isDarkMode }">
           {{ isDarkMode ? 'NIGHTMODE' : 'DAYMODE' }}
         </div>
         <div class="toggle-circle" :class="{ active: !isDarkMode }">
@@ -26,8 +26,8 @@ export default {
   },
   data() {
     return {
-      dayIcon: new URL('@/assets/images/day.png', import.meta.url).href, 
-      nightIcon: new URL('@/assets/images/night.png', import.meta.url).href, 
+      dayIcon: new URL('@/assets/images/theme/day.png', import.meta.url).href,
+      nightIcon: new URL('@/assets/images/theme/night.png', import.meta.url).href,
     }
   },
   methods: {
@@ -42,9 +42,10 @@ export default {
 .card {
   background-color: var(--background-color);
   border-radius: 15px;
-  padding: 40px;
+  padding: 130px 40px 0;
+  margin: 0 15px 0;
   max-width: 13rem;
-  height: 18.75rem;
+  max-height: 18.75rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -58,7 +59,7 @@ export default {
   position: relative;
   width: 100px;
   height: 20px;
-  background-color: var(--text-color);
+  background-color: var(--theme-background);
   border-radius: 20px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -67,10 +68,9 @@ export default {
   align-items: center;
   justify-content: space-between;
   padding: 0 10px;
-  background-color: #EBEBEB;
   font-size: 12px;
   font-weight: 400;
-  color: #343434;
+  color:var(--text-color);
 }
 
 .mode-label {
@@ -89,7 +89,9 @@ export default {
   height: 30px;
   background-color: #fff;
   border-radius: 50%;
-  transition: transform 0.3s ease, left 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    left 0.3s ease;
   transform: translateY(-50%);
   z-index: 10;
   display: flex;
@@ -99,15 +101,13 @@ export default {
 
 .toggle-circle.active {
   left: 70px;
-  border: 1px solid #EBEBEB;
+  border: 1px solid #ebebeb;
 }
 
 .toggle-circle:not(.active) {
   left: 0px;
   border: 1px solid #343434;
-
 }
-
 
 .circle-icon {
   width: 20px;
@@ -127,6 +127,22 @@ p {
 }
 
 .dark-text {
-  color: #FFFFFF;
+  color: #ffffff;
+}
+
+@media (max-width: 648px) {
+  .card {
+    height: 100px;
+    width: 12rem;
+    padding: 10px;
+    display: flex;
+    justify-self: center;
+  }
+  .logo {
+    width: 80%;
+  }
+  p {
+    display: none;
+  }
 }
 </style>

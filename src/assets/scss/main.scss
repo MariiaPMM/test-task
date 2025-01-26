@@ -1,10 +1,9 @@
 .container {
-  max-width: 1200px;
+  max-width: 80%;
   margin: 0 auto;
-  padding: 0 15px;
-  width: 100%;
 }
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,38 +11,49 @@ html, body {
   height: 100%;
   overflow-x: hidden; /* Вимикає горизонтальну прокрутку, якщо контент виходить за межі екрану */
   font-size: 16px;
-
 }
 
 * {
-  box-sizing: border-box; /* Глобальне управління коробочною моделлю */
+  box-sizing: border-box;
 }
 
 /* Глобальні змінні для тем */
 :root {
   --background-color: #ffffff;
   --text-color: #000000;
-  --content-background-color: #FFFFFF;
+  --content-background-color: #ffffff;
+  --card-color: #212121;
+  --search-background: #ebebeb;
+  --theme-background: #ebebeb;
+  --search-color: #343434;
+  // --search-icon: rgba(52, 52, 52, 1);
+  --search-icon: url('../images/servicesImage/search-icon-dark.svg');
   
 }
 
 .dark-theme {
-  --background-color: #414141;
+  --background-color: #343434;
   --text-color: #ffffff;
-  --content-background-color: #414141;
+  --content-background-color: #383838;
+  --card-color: #ffffff;
+  --search-background: rgba(255, 255, 255, 0.1);
+  --theme-background: #212121;
+  --search-color: #ffffff;
+  // --search-icon:rgba(255, 255, 255, 1);
+  --search-icon: url('../images/servicesImage/search-icon-light.svg');
+
 }
 
 body {
   background-color: var(--background-color);
   color: var(--text-color);
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'MuseoSans', sans-serif;
 }
 
 .main-content {
-  background-color: var(--content-background-color); /* Фон основного контенту */
-  padding: 20px;
-  
-  // box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.3s ease; /* Плавний перехід */
+  background-color: var(--content-background-color);
+  padding: 20px 0 ;
+
+  transition: background-color 0.3s ease;
 }

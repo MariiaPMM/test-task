@@ -3,10 +3,8 @@
     <!-- <TheHeader /> -->
     <TheHeader :isDarkMode="isDarkMode" @toggle-theme="toggleTheme" />
     <div class="main-content">
+      <TheServices />
       <KnowMore />
-      <!-- Перша секція -->
-      <!-- <Section2 /> Друга секція -->
-      <!-- <Section3 /> Третя секція -->
     </div>
     <TheFooter />
   </div>
@@ -16,13 +14,14 @@
 import KnowMore from '../views/KnowMore.vue'
 import TheHeader from '../views/TheHeader.vue'
 import TheFooter from '../views/TheFooter.vue'
-
+import TheServices from '../views/TheServices.vue'
 export default {
   name: 'HomeView',
   components: {
     KnowMore,
     TheHeader,
     TheFooter,
+    TheServices,
   },
   data() {
     return {

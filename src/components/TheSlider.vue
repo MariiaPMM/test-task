@@ -27,21 +27,23 @@ export default {
     return {
       currentSlide: 0,
       slides: [
-        new URL('@/assets/images/slider1.png', import.meta.url).href,
-        new URL('@/assets/images/slider2.png', import.meta.url).href,
-        new URL('@/assets/images/slider3.png', import.meta.url).href,
-        new URL('@/assets/images/slider4.png', import.meta.url).href,
-        new URL('@/assets/images/slider5.png', import.meta.url).href,
-        new URL('@/assets/images/slider6.png', import.meta.url).href,
+        new URL('@/assets/images/slider/slider1.png', import.meta.url).href,
+        new URL('@/assets/images/slider/slider2.png', import.meta.url).href,
+        new URL('@/assets/images/slider/slider3.png', import.meta.url).href,
+        new URL('@/assets/images/slider/slider4.png', import.meta.url).href,
+        new URL('@/assets/images/slider/slider5.png', import.meta.url).href,
+        new URL('@/assets/images/slider/slider6.png', import.meta.url).href,
       ],
-      autoScrollInterval: null, // Змінна для збереження інтервалу
+      autoScrollInterval: null,
+      screenWidth: window.innerWidth, // Динамічна ширина екрана
     }
   },
   computed: {
     slidePairs() {
-      // Групуємо слайди в пари
+      const isSmallScreen = this.screenWidth <= 768
+      const groupSize = isSmallScreen ? 1 : 2
       return this.slides.reduce((result, slide, index) => {
-        if (index % 2 === 0) result.push([])
+        if (index % groupSize === 0) result.push([])
         result[result.length - 1].push(slide)
         return result
       }, [])
@@ -49,24 +51,29 @@ export default {
   },
   methods: {
     goToSlide(index) {
-      this.currentSlide = index // Зміна поточного слайду при натисканні на крапочку
+      this.currentSlide = index
     },
     nextSlide() {
-      this.currentSlide = (this.currentSlide + 1) % this.slidePairs.length // Переходить до наступного слайду
+      this.currentSlide = (this.currentSlide + 1) % this.slidePairs.length
     },
     startAutoScroll() {
-      this.autoScrollInterval = setInterval(this.nextSlide, 3000) // Автоматична прокрутка кожні 3 секунди
+      this.autoScrollInterval = setInterval(this.nextSlide, 3000)
     },
     stopAutoScroll() {
-      clearInterval(this.autoScrollInterval) // Зупиняє прокрутку
+      clearInterval(this.autoScrollInterval)
       this.autoScrollInterval = null
+    },
+    updateScreenWidth() {
+      this.screenWidth = window.innerWidth // Оновлює ширину екрана
     },
   },
   mounted() {
-    this.startAutoScroll() // Запускає автоматичну прокрутку після рендеру
+    this.startAutoScroll()
+    window.addEventListener('resize', this.updateScreenWidth)
   },
   beforeUnmount() {
-    this.stopAutoScroll() // Очищає інтервал перед знищенням компонента
+    this.stopAutoScroll()
+    window.removeEventListener('resize', this.updateScreenWidth)
   },
 }
 </script>
@@ -104,20 +111,20 @@ export default {
   flex-direction: row;
   justify-content: space-between;
   gap: 10px;
-  height: 100%; /* Висота кожної пари слайдів */
+  height: 100%;
 }
 
 .slide {
   flex: 1;
-  width: 50%; /* Половина контейнера (якщо два слайди в парі) */
-  height: 100%; /* Рівна висота */
+  width: 50%;
+  height: 100%;
 }
 
 .slide img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Забезпечує рівномірне масштабування без спотворень */
-  border-radius: 15px; /* Кути залишаються закругленими */
+  object-fit: cover;
+  border-radius: 15px;
 }
 
 .navigation {
@@ -127,28 +134,57 @@ export default {
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Відстань між крапками */
+  gap: 10px;
   z-index: 10;
 }
 
 .navigation button {
   background-color: rgba(255, 255, 255, 0.35);
-  border: none; /* Видаляємо рамку */
-  width: 15px; /* Ширина крапочки */
-  height: 15px; /* Висота крапочки */
-  border-radius: 50%; /* Робимо крапочку круглою */
+  border: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
   cursor: pointer;
   transition:
     transform 0.2s ease,
-    background-color 0.3s ease; /* Анімація */
+    background-color 0.3s ease;
 }
 
 .navigation button:hover {
-  transform: scale(1.2); /* Збільшення при наведенні */
+  transform: scale(1.2);
 }
 
 .navigation .active {
   background-color: rgba(255, 255, 255, 1);
-  transform: scale(1.4); /* Збільшення розміру активної крапочки */
+  transform: scale(1.4);
+}
+@media (max-width: 1024px) {
+  .slider-container {
+    max-width: 90%;
+    height: 16rem; /* Зменшена висота */
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-container {
+    height: 14rem;
+  }
+  .slide-pair {
+    gap: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .slider-container {
+    height: 10rem;
+    padding-right: 10px;
+  }
+  .slide img {
+    border-radius: 8px;
+  }
+  .navigation button {
+    width: 6px;
+    height: 6px;
+  }
 }
 </style>

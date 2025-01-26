@@ -46,4 +46,12 @@ header {
   display: flex;
   flex-direction: column;
 }
+
+@media (max-width: 648px) {
+  .header_top {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+}
 </style>
