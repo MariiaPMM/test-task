@@ -1,8 +1,13 @@
 @font-face {
-  font-family: 'MuseoSans';
-  src:
-    url('../fonts/MuseoSansCyrl-300.woff2') format('woff2'),
-    url('../fonts/MuseoSansCyrl-300.woff2') format('woff');
-  font-weight: 400;
-  font-style: normal;
+  font-family: 'MuseoSans';  
+  src: url('../fonts/MuseoSansCyrl-300.woff2') format('woff2');
+  font-weight: 400;  
+  font-style: normal;  
+}
+
+@font-face {
+  font-family: 'Raleway'; 
+  src: url('../fonts/Raleway.woff2') format('woff2');  
+  font-weight: 400;  
+  font-style: normal;  
 }
