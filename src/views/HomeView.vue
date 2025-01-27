@@ -5,6 +5,7 @@
     <div class="main-content">
       <TheServices />
       <KnowMore />
+      <InstructionalDesign/>
     </div>
     <TheFooter />
   </div>
@@ -15,6 +16,7 @@ import KnowMore from '../views/KnowMore.vue'
 import TheHeader from '../views/TheHeader.vue'
 import TheFooter from '../views/TheFooter.vue'
 import TheServices from '../views/TheServices.vue'
+import InstructionalDesign from '../views/InstructionalDesign.vue';
 export default {
   name: 'HomeView',
   components: {
@@ -22,6 +24,7 @@ export default {
     TheHeader,
     TheFooter,
     TheServices,
+    InstructionalDesign,
   },
   data() {
     return {

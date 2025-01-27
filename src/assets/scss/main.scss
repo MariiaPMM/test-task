@@ -11,6 +11,7 @@ body {
   height: 100%;
   overflow-x: hidden; /* Вимикає горизонтальну прокрутку, якщо контент виходить за межі екрану */
   font-size: 16px;
+ 
 }
 
 * {
@@ -28,7 +29,7 @@ body {
   --search-color: #343434;
   // --search-icon: rgba(52, 52, 52, 1);
   --search-icon: url('../images/servicesImage/search-icon-dark.svg');
-  
+  --desine-text:#424242;
 }
 
 .dark-theme {
@@ -41,6 +42,7 @@ body {
   --search-color: #ffffff;
   // --search-icon:rgba(255, 255, 255, 1);
   --search-icon: url('../images/servicesImage/search-icon-light.svg');
+  --desine-text:#FFFFFF;
 
 }
 
@@ -49,6 +51,7 @@ body {
   color: var(--text-color);
   margin: 0;
   font-family: 'MuseoSans', sans-serif;
+   
 }
 
 .main-content {

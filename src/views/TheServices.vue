@@ -83,6 +83,12 @@ export default {
 h2 {
   font-size: 3.12rem;
   color: #999b9a;
+  display: flex;
+  justify-content: center;
+  @media (max-width: 768px) {
+    margin: 10px 0;
+    font-size: 2rem;
+  }
 }
 .card-list {
   display: flex;
@@ -98,7 +104,8 @@ h2 {
   @media (max-width: 1024px) {
     .card-list {
       flex-wrap: wrap;
-      justify-content: center;
+      justify-content: space-around;
+      margin: 0 0 15px;
     }
   }
 }

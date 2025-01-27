@@ -20,7 +20,13 @@ export default {
 <style scoped>
 .card {
   padding: 15px;
-  max-width: 200px;
+  max-width: 220px;
+
+  @media (max-width: 768px) {
+    padding: 0;
+  max-width: 300px;
+
+  }
 }
 
 .image__container {
