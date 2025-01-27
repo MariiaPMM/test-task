@@ -36,6 +36,11 @@ const routes = [
       },
       {
         path: '',
+        name: 'Contact',
+        component: () => import('@/views/TheContact.vue'),
+      },
+      {
+        path: '',
         name: 'TheFooter',
         component: () => import('@/views/TheFooter.vue'),
       },

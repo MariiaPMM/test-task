@@ -60,3 +60,13 @@ body {
 
   transition: background-color 0.3s ease;
 }
+.button{
+  background-color: rgba(61, 148, 140, 1);
+  height: clamp(2rem, 4vw, 3rem);
+  width: clamp(8rem, 15vw, 15rem);
+  border-radius: 2rem;
+  border: none;
+  color: rgba(255, 255, 255, 1);
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  cursor: pointer;
+}

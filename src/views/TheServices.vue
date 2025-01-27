@@ -100,13 +100,13 @@ h2 {
 @media (max-width: 1024px) {
   .card-list {
     flex-wrap: wrap;
-  }
-  @media (max-width: 1024px) {
-    .card-list {
-      flex-wrap: wrap;
-      justify-content: space-around;
-      margin: 0 0 15px;
-    }
+    justify-content: space-around;
+    margin: 0 0 15px;
   }
 }
+@media (max-width: 768px) {
+    .card-list {
+       justify-content: start;
+    }
+  }
 </style>

@@ -8,7 +8,7 @@
             Learning.
           </h2>
           <p>What We Can Do For You?</p>
-          <a href=""><button>Know More</button></a>
+          <a href=""><button class="button">Know More</button></a>
         </div>
         <div class="info__man"></div>
       </div>
@@ -84,16 +84,16 @@ export default {
       margin: 0 0 2rem;
     }
 
-    button {
-      background-color: rgba(61, 148, 140, 1);
-      height: clamp(2rem, 5vw, 3rem);
-      width: clamp(8rem, 15vw, 15rem);
-      border-radius: 2rem;
-      border: none;
-      color: rgba(255, 255, 255, 1);
-      font-size: clamp(1rem, 2vw, 1.5rem);
-      cursor: pointer;
-    }
+    // button {
+    //   background-color: rgba(61, 148, 140, 1);
+    //   height: clamp(2rem, 5vw, 3rem);
+    //   width: clamp(8rem, 15vw, 15rem);
+    //   border-radius: 2rem;
+    //   border: none;
+    //   color: rgba(255, 255, 255, 1);
+    //   font-size: clamp(1rem, 2vw, 1.5rem);
+    //   cursor: pointer;
+    // }
   }
 
   .info__man {

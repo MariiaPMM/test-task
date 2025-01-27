@@ -45,6 +45,7 @@ export default {
   justify-content: space-between;
   @media (max-width: 960px) {
     flex-direction: column;
+    padding: 0;
   }
 
   .image__container {
