@@ -11,8 +11,8 @@
     "lint": "eslint . --fix",
     "format": "prettier --write src/",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
-    "homepage": "https://.github.io/https://mariiapmm.github.io/test-task"
+    "deploy": "vite build && gh-pages -d dist",
+    "homepage": "https://.github.io/https://mariiapmm.github.io/test-task/"
   },
   "dependencies": {
     "pinia": "^2.3.1",
