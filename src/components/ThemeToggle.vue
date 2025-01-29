@@ -45,7 +45,7 @@ export default {
   padding: 130px 40px 0;
   margin: 0 15px 0;
   max-width: 13rem;
-  max-height: 18.75rem;
+  height: 18.75rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -144,5 +144,43 @@ p {
   p {
     display: none;
   }
+}
+
+.dark-text {
+  color: #ffffff;
+}
+@media (max-width: 1024px) {
+  .card {
+    height: 16rem;
+    padding: 80px 10px 10px;
+  }
+}
+@media (max-width: 960px) {
+  .card {
+    height: 14rem;
+    padding: 50px 0 0 ;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    height: 16rem;
+    justify-content: end;
+    padding: 10px;
+  }
+
+}
+@media (max-width: 648px) {
+  .card {
+    height: 120px;
+    width: 100%;
+  }
+  .card__info {
+    display: none;
+  }
+} 
+
+.logo {
+  width: 80%;
 }
 </style>

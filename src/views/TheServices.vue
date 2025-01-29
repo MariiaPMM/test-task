@@ -1,6 +1,6 @@
 <template>
-  <section class="container">
-    <div class="services">
+  <section class="container" id="services">
+    <div class="services" >
       <h2>Services We Provide</h2>
 
       <input v-model="searchQuery" type="text" placeholder="Search" class="search-input" />
@@ -76,6 +76,7 @@ export default {
   /* filter: var(--search-icon); */
   background: var(--search-icon) no-repeat right center;
   background-color: var(--search-background);
+  background-position: calc(100% - 10px) center;
 }
 .search-input::placeholder {
   color: var(--search-color);
@@ -110,3 +111,4 @@ h2 {
     }
   }
 </style>
+

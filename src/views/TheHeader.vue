@@ -1,10 +1,11 @@
 <template>
-  <header>
+  <header id="home">
     <div class="header_top">
       <ThemeToggle :isDarkMode="isDarkMode" @toggle-theme="$emit('toggle-theme')" />
       <TheSlider />
     </div>
     <TheNavigation />
+    
   </header>
 </template>
 

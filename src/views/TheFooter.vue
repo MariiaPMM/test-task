@@ -5,7 +5,7 @@
         <img class="footer__img" src="../assets/images/logo-footer.png" alt="" />
         <p class="footer__info">Taking learning to the next level</p>
       </div>
-      <ul>
+      <ul class="footer__list">
         <li><a href="#">Home eLearning </a></li>
         <li><a href="#">Price Quote Services </a></li>
         <li><a href="#">Instructional Design</a></li>
@@ -41,42 +41,41 @@ footer {
   justify-content: space-between;
   color: #929292;
   padding: 60px 0;
-  @media (max-width:960px) {
+  @media (max-width: 960px) {
     flex-direction: column;
-      
+    padding: 15px 0 ;
   }
+  
 }
-li {
-  list-style-type: none;
-  flex: 1 1 calc(33.333% - 20px);
-  box-sizing: border-box;
-  @media (max-width:1024px) {
-    flex: 1 1 calc(50% - 20px);
-  }
-  @media (max-width:960px) {
-    flex: 1 1 100%;
-  }
-}
-ul {
+.footer__list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   justify-content: flex-start;
-    
+  li {
+    list-style-type: none;
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+    @media (max-width: 1024px) {
+      flex: 1 1 calc(50% - 20px);
+    }
+    @media (max-width: 480px) {
+      flex: 1 1 100%;
+    }
+  }
 }
 .footer__logo {
   max-width: 230px;
   max-height: 60px;
   padding: 0;
-  margin: 0 200px  0 0 ;
-  @media (max-width:1280px) {
-    margin: 0 50px  0 0 ;
+  margin: 0 200px 0 0;
+  @media (max-width: 1280px) {
+    margin: 0 50px 0 0;
   }
-  @media (max-width:960px) {
-     margin: 0 0 20px;
+  @media (max-width: 960px) {
+    margin: 0 0 20px;
   }
-  
 }
 .footer__info {
   margin: 0;

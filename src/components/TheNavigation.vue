@@ -1,23 +1,31 @@
 <template>
   <nav>
     <div class="container" :class="{ 'column-layout': isMenuOpen }">
-     <div class="burger">
+      <div class="burger">
         <a class="image" href="#home">
           <img src="../assets/images/logo/logolight.png" alt="Logo" class="logo" />
         </a>
         <button class="menu-toggle" @click="toggleMenu" :aria-expanded="isMenuOpen">
-          <span :class="{ 'open': isMenuOpen }"></span>
-          <span :class="{ 'open': isMenuOpen }"></span>
-          <span :class="{ 'open': isMenuOpen }"></span>
+          <span :class="{ open: isMenuOpen }"></span>
+          <span :class="{ open: isMenuOpen }"></span>
+          <span :class="{ open: isMenuOpen }"></span>
         </button>
-     </div>
-      <ul :class="{ 'show-menu': isMenuOpen }">
-        <li><a href="#home" @click="closeMenu">Home</a></li>
-        <li><a href="#services" @click="closeMenu">Services</a></li>
-        <li><a href="#instructionalDesign" @click="closeMenu">Instructional Design</a></li>
-        <li><a href="#eLearningPriceQuote" @click="closeMenu">eLearning Price Quote</a></li>
-        <li><a href="#eLearningPackages" @click="closeMenu">eLearning Packages</a></li>
-        <li><a href="#contact" @click="closeMenu">Contact</a></li>
+      </div>
+      <ul class="nav__menu" :class="{ 'show-menu': isMenuOpen }">
+        <li><a href="/#home" @click="closeMenu" replace>Home</a></li>
+        <li>
+          <a href="#services" @click="closeMenu" >Services</a>
+        </li>
+        <li>
+          <a href="/#instructionalDesign" @click="closeMenu" replace>Instructional Design</a>
+        </li>
+        <li>
+          <a href="/#eLearningPriceQuote" @click="closeMenu" replace>eLearning Price Quote</a>
+        </li>
+        <li>
+          <a href="/#eLearningPackages" @click="closeMenu" replace>eLearning Packages</a>
+        </li>
+        <li><a href="/#contact" @click="closeMenu" replace>Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -25,27 +33,27 @@
 
 <script>
 export default {
-  name: "TheNavigation",
+  name: 'TheNavigation',
   data() {
     return {
       isMenuOpen: false,
-    };
+    }
   },
   methods: {
     toggleMenu() {
-      this.isMenuOpen = !this.isMenuOpen;
+      this.isMenuOpen = !this.isMenuOpen
     },
     closeMenu() {
-      this.isMenuOpen = false;
+      this.isMenuOpen = false
     },
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>
 nav {
   width: 100%;
-  background: #414141;
+  background: var(--nav-color);
   border-top: 10px solid #3d948e;
   height: auto;
 
@@ -56,7 +64,6 @@ nav {
     flex-wrap: wrap;
     padding: 5px 20px;
 
-     
     &.column-layout {
       flex-direction: column;
       align-items: flex-start;
@@ -65,7 +72,6 @@ nav {
     .image {
       flex: 1;
       width: 30%;
-      
     }
 
     .menu-toggle {
@@ -83,7 +89,9 @@ nav {
         width: 25px;
         height: 3px;
         background: #ffffff;
-        transition: transform 0.3s, opacity 0.3s;
+        transition:
+          transform 0.3s,
+          opacity 0.3s;
       }
 
       & .open:nth-child(1) {
@@ -99,7 +107,7 @@ nav {
       }
     }
 
-    ul {
+    .nav__menu {
       flex: 2;
       display: flex;
       flex-direction: row;
@@ -107,13 +115,14 @@ nav {
       list-style: none;
       font-size: 14px;
       font-weight: 300;
+      max-width: 80%;
 
       a {
         text-decoration: none;
         color: #ffffff;
         transition: color 0.3s;
         margin: 0 10px 0;
-
+        font-family: 'MuseoSans';
         &:hover {
           color: #3d948e;
         }
@@ -128,24 +137,22 @@ nav {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   nav {
     .container {
-
-      .burger{
-      display: flex;
-      width: 100%;
-    }
+      .burger {
+        display: flex;
+        width: 100%;
+      }
       .menu-toggle {
         display: flex;
       }
 
-      ul {
+      .nav__menu {
         display: none;
         flex-direction: column;
         width: 80%;
         padding: 10px 0;
-        
 
         li {
           width: 100%;

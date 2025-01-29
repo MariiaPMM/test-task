@@ -1,5 +1,5 @@
 <template>
-  <section class="knowmore__container">
+  <section class="knowmore__container" id="eLearningPriceQuote">
     <div class="knowmore__background">
       <div class="knowmore__content">
         <div class="content__info">

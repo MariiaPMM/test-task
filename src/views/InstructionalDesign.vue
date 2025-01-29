@@ -1,5 +1,5 @@
 <template>
-  <section id="InstructionalDesign" class="container">
+  <section id="instructionalDesign" class="container">
     <h2>Instructional Design</h2>
     <DesignCard
       v-for="(card, index) in cards"
@@ -54,7 +54,7 @@ export default {
 }
 </script>
 <style>
-#InstructionalDesign .design__card:last-child {
+#instructionalDesign .design__card:last-child {
   flex-direction: row-reverse;
   @media (max-width: 960px) {
     flex-direction: column;

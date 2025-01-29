@@ -11,7 +11,7 @@ body {
   height: 100%;
   overflow-x: hidden; /* Вимикає горизонтальну прокрутку, якщо контент виходить за межі екрану */
   font-size: 16px;
- 
+  scroll-behavior: smooth;
 }
 
 * {
@@ -21,6 +21,7 @@ body {
 /* Глобальні змінні для тем */
 :root {
   --background-color: #ffffff;
+  --nav-color:#343434;
   --text-color: #000000;
   --content-background-color: #ffffff;
   --card-color: #212121;
@@ -34,6 +35,7 @@ body {
 
 .dark-theme {
   --background-color: #343434;
+  --nav-color:#414141;
   --text-color: #ffffff;
   --content-background-color: #383838;
   --card-color: #ffffff;
@@ -56,7 +58,7 @@ body {
 
 .main-content {
   background-color: var(--content-background-color);
-  // padding: 20px 0 ;
+  padding: 20px 0 0 ;
 
   transition: background-color 0.3s ease;
 }

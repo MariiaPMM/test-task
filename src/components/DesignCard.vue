@@ -80,11 +80,11 @@ export default {
       display: flex;
       align-items: start;
       flex-direction: column;
+      gap: 20px;
 
       .card-list-item {
         display: flex;
         align-items: center;
-        // margin-bottom: 0.5rem;
 
         .checkmark {
           margin-right: 0.5rem;

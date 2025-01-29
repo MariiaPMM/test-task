@@ -1,5 +1,5 @@
 <template>
-  <section class="contact">
+  <section class="contact" id="contact">
     <h2 class="contact__title">Talk To Us About Your Project</h2>
     <p class="contact__subtitle">We will never send spam or add you to a mailing list</p>
     <section class="container">

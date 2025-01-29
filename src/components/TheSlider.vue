@@ -85,11 +85,11 @@ export default {
   align-items: flex-start;
   max-width: 642px;
   padding-right: 40px;
-  margin: 25px;
+  margin: 10px;
   overflow: hidden;
   position: relative;
   height: 18.75rem; /* Висота контейнера слайдера */
-  border-radius: 15px;
+  border-radius: 20px;
 }
 
 .slider {
@@ -97,6 +97,7 @@ export default {
   overflow: hidden;
   height: 100%; /* Повна висота контейнера */
   position: relative;
+  border-radius: 15px;
 }
 
 .slides {
@@ -164,10 +165,16 @@ export default {
     height: 16rem; /* Зменшена висота */
   }
 }
+@media (max-width: 960px) {
+  .slider-container {
+    max-width: 110%;
+    height: 14rem; /* Зменшена висота */
+  }
+}
 
 @media (max-width: 768px) {
   .slider-container {
-    height: 14rem;
+    height: 16rem;
   }
   .slide-pair {
     gap: 15px;
@@ -176,7 +183,7 @@ export default {
 
 @media (max-width: 480px) {
   .slider-container {
-    height: 10rem;
+    /* height: 12rem; */
     padding-right: 10px;
   }
   .slide img {
