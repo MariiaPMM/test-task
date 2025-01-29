@@ -1,6 +1,18 @@
 # test task
+This project is modeled after Figma, developed using Vue.js.
+The site has a modern design, implemented interactive functions, such as dark/light mode, slider.
+## Technologies used  
+- Vue.js is the main framework for creating site components  
+- Vue Router – to implement routing  
+- SCSS – for styling using variables, mixins and attachments  
+- JavaScript (ES6) – for interactivity  
+- HTML5 – page structure  
+- CSS3 animations – to improve the user experience  
 
-This template should help get you started developing with Vue 3 in Vite.
+## Functions  
+- Dark/light mode  
+- Slider for visual presentation of content  
+- Interactive navigation between pages
 
 ## Recommended IDE Setup
 
@@ -39,3 +51,12 @@ npm run test:unit
 ```sh
 npm run lint
 ```
+### Folder structure:
+src/assets/ – styles, fonts, images
+src/components/ – Vue components
+src/views/ – project pages
+src/router/ – routing configuration
+src/main.js is the main initialization file
+src/App.vue
+### Developer
+The development, layout and interactive functionality was done by me.
